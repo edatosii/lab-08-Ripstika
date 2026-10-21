@@ -5,8 +5,7 @@ package co.umariana;
  *
  * INSTRUCCIONES
  * -------------
- * 1. Cada método tiene un "TODO" y lanza UnsupportedOperationException.
- *    Reemplace esa línea por su implementación.
+ * 1. Implemente los métodos indicados en los ejercicios.
  * 2. NO modifique las pruebas (src/test). Ejecútelas con:   mvn test
  * 3. No cambie los nombres ni los parámetros de los métodos.
  */
@@ -14,20 +13,17 @@ public class Calculadora {
 
     /** @return la suma de a y b */
     public int sumar(int a, int b) {
-        // TODO: escriba su código aquí
-        throw new UnsupportedOperationException("TODO: sumar");
+        return a + b;
     }
 
     /** @return a menos b */
     public int restar(int a, int b) {
-        // TODO: escriba su código aquí
-        throw new UnsupportedOperationException("TODO: restar");
+        return a - b;
     }
 
     /** @return el producto de a y b */
     public int multiplicar(int a, int b) {
-        // TODO: escriba su código aquí
-        throw new UnsupportedOperationException("TODO: multiplicar");
+        return a * b;
     }
 
     /**
@@ -35,14 +31,14 @@ public class Calculadora {
      * @throws ArithmeticException si b es 0 (mensaje: "No se puede dividir entre cero")
      */
     public double dividir(int a, int b) {
-        // TODO: escriba su código aquí.
-        // Pista: si divide dos int, Java descarta los decimales. Convierta uno a double.
-        throw new UnsupportedOperationException("TODO: dividir");
+        if (b == 0) {
+            throw new ArithmeticException("No se puede dividir entre cero");
+        }
+        return (double) a / b;
     }
 
     /** @return true si el número es par (el 0 es par; los negativos también pueden serlo) */
     public boolean esPar(int numero) {
-        // TODO: escriba su código aquí
-        throw new UnsupportedOperationException("TODO: esPar");
+        return numero % 2 == 0;
     }
 }
